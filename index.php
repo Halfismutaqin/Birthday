@@ -2,18 +2,18 @@
 date_default_timezone_set('Asia/Jakarta');
 // $tgl_ini    = date('m-d');
 // echo $tgl_ini;
-    if (@$_GET['data']=="kosong"){
-        $alert =  
+if (@$_GET['data'] == "kosong") {
+    $alert =
         '<div class="alert alert-danger text-center" role="alert">
         Maaf data tidak boleh kosong!
         </div>';
-    }
-    if (@$_GET['nama']!=""){
-        $alert =  
+}
+if (@$_GET['nama'] != "") {
+    $alert =
         '<div class="alert alert-warning text-center" role="alert">
-        Hii... Selamat Datang '.$_GET['nama'].'
+        Hii... Selamat Datang ' . $_GET['nama'] . '
         </div>';
-    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,48 +55,49 @@ date_default_timezone_set('Asia/Jakarta');
 </style>
 
 <body>
-    <div class="row">
+    <div class="row align-items-center">
         <?= @$alert ?>
-        <div class="col-3"></div>
-        <div class="col-6">
-    <div class="container-sm  py-5">
-        <div class="card h-100 rounded-3 gradient-custom-2">
-            <br>
-            <div class="container py-2 h-100">
-                <form action="ultah.php" method="post">
-                    <div class="row text-center">
-                        <strong>
-                            <h3 class="four text-white">
-                                Hi... Selamat datang, aku punya sesuatu untukmu !!!
-                            </h3>
-                        </strong>
-                        <hr width="90%"><br>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 justify-content-center">
+            <div class="container-sm  py-5">
+                <div class="card h-100 rounded-3 gradient-custom-2">
+                    <br>
+                    <div class="container py-2 h-100">
+                        <form action="ultah.php" method="post">
+                            <div class="row text-center">
+                                <strong>
+                                    <h3 class="four text-white">
+                                        Hi... Selamat datang, aku punya sesuatu untukmu !!!
+                                    </h3>
+                                </strong>
+                                <hr width="90%"><br>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-sm-3 text-start text-white">
+                                    <h5><label for="">&nbsp; Nama </label></h5>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" name="nama" class="form-control" placeholder="Siapa Namamu" required>
+                                </div>
+                                <br><br>
+                                <div class="col-sm-3 text-start text-white">
+                                    <h5><label for="">&nbsp; Tgl Lahir </label></h5>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="Date" name="tgl_lahir" class="form-control" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col text-center">
+                                <button type="submit" name="kirim" class="btn btn-primary">Oke</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="row text-center">
-                        <div class="col-3 text-start text-white">
-                            <h5><label for="">&nbsp; Nama </label></h5><br>
-                        </div>
-                        <div class="col-9">
-                            <input type="text" name="nama" class="form-control" placeholder="Siapa Namamu" required>
-                        </div>
 
-                        <div class="col-3 text-start text-white">
-                            <h5><label for="">&nbsp; Tgl Lahir </label></h5><br>
-                        </div>
-                        <div class="col-9">
-                            <input type="Date" name="tgl_lahir" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="col text-center">
-                        <button type="submit" name="kirim" class="btn btn-primary">Oke</button>
-                    </div>
-                </form>
+                </div>
             </div>
-
         </div>
-    </div>
-        </div>
-        <div class="col-3"></div>
+        <div class="col-sm-3"></div>
     </div>
 </body>
 <!-- <script src="assets/main.js"></script> -->
